@@ -25,7 +25,7 @@ long lines
 of whatever
 and whenever`)
 
-*/
+
 
 const age = 15
 const isOldEnough = age >= 18
@@ -37,12 +37,6 @@ if (isOldEnough) {
   console.log(`Oh oh no babe 🖐 you are too young.
   Wait another ${yearsLeft} years 🤞😉`)
 }
-
-/*
-const weight = 34
-const height = 1.40
-console.log( (weight, height) => weight / height ** 2)
-*/
 
 const birthYear = 2012
 let century
@@ -74,3 +68,4 @@ if (marksBMI > johnsBMI) {
 } else {
   console.log(`Johns BMI (${johnsBMI}) is higher than Marks BMI (${marksBMI})!`)
 }
+*/

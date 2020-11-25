@@ -1,3 +1,4 @@
+/*
 // 20. Type Conversion and Coercion
 
 //  Type Conversion
@@ -19,3 +20,27 @@ console.log('23' > '29')
 let n = '1' + 1 // '11'
 n = n - 1  // '11' - ' = 10
 console.log(n)
+*/
+
+// 24. Logical Operators -> Able to drive exercise
+const hasDriversLicense = true // A
+const hasGoodVision = true // B
+
+console.log(hasDriversLicense && hasGoodVision) // AND
+console.log(hasDriversLicense || hasGoodVision) // OR
+console.log(!hasDriversLicense)
+
+/*
+if (shouldDrive) {
+  console.log('COUNTRY MAMA TAKE ME HOME COUNTRY ROAD')
+} else {
+  console.log('GET OUT THIS CAR!')
+} */
+
+const isTired = false
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log('COUNTRY ROAD COUNTRY MAMA TAKE ME HOME')
+} else {
+  console.log('GET OUT THIS CAR!')
+}
