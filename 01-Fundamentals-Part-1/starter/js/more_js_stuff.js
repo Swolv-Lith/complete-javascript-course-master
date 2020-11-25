@@ -50,14 +50,15 @@ function AverageScore(firstScore, secondScore, thirdScore) {
   return Math.round((firstScore + secondScore + thirdScore) / 3)
 }
 
-const dolphinsScore = AverageScore(97, 112, 2)
-const koalasScore = AverageScore(109, 95, 0)
+const dolphinsScore = AverageScore(97, 112, 101)
+const koalasScore = AverageScore(109, 95, 106)
 
 const dolphinsGreater100 = dolphinsScore >= 100
 const koalasGreater100 = koalasScore >= 100
 
+const bothQualified = dolphinsGreater100 && koalasGreater100
 
-if ((dolphinsScore === koalasScore) && ((dolphinsGreater100 && koalasGreater100) === true))  {
+if (bothQualified && (dolphinsScore === koalasScore))  {
   console.log(`
   =========================
         WE HAVE A DRAW
@@ -65,21 +66,21 @@ if ((dolphinsScore === koalasScore) && ((dolphinsGreater100 && koalasGreater100)
       KOALAS SCORE ${koalasScore}
   =========================
   `)
-} else if ((dolphinsScore > koalasScore) && ((dolphinsGreater100 && koalasGreater100) === true) || (koalasGreater100 === false)) {
+} else if (bothQualified && (dolphinsScore > koalasScore)) {
   console.log(`
   ======================================
   Dolphins is the WINNER with ${dolphinsScore} points!!
   ======================================
             #2 Place Score ${koalasScore}
   `)
-} else if ((dolphinsScore < koalasScore) && ((dolphinsGreater100 && koalasGreater100) === true) || (dolphinsGreater100 === false)) {
+} else if (bothQualified && (dolphinsScore < koalasScore)) {
   console.log(`
   ======================================
   Koalas is the WINNER with ${koalasScore} points!!
   ======================================
             #2 Place Score ${dolphinsScore}
   `)
-} else if ((dolphinsGreater100 && koalasGreater100) === false) {
+} else {
   console.log(`
   ========================
   No teams qualified
