@@ -163,7 +163,7 @@ if (bothQualified && (dolphinsScore === koalasScore))  {
 
 // 26. The switch Statement
 
-const day = 'monday'
+const day = 'wednesday'
 
 switch (day) {
   case 'monday':
@@ -187,3 +187,40 @@ switch (day) {
   default:
     console.log('Not a valid day!')
 }
+
+// Funny exercise
+
+if (day === 'monday') {
+  console.log('Plan course structure')
+  console.log('Go to coding meetup')
+} else if (day === 'tuesday') {
+  console.log('Prepare theory videos')
+} else if(day === 'wednesday' || day === 'thursday'){
+  console.log('🎶😉🤞')
+} else if (day === 'friday') {
+  console.log('Write code examples')
+} else if (day === 'saturday' || day === 'sunday') {
+  console.log('Enjoy the weekend 🎶')
+} else {
+  console.log('Not a valid day!')
+}
+
+// 28. The conditional (ternary) operator
+
+const age = 23
+age >= 18 ? console.log('I like to drink 🍻') : console.log('I like to drink 🧃')
+
+const drink = age >= 18 ? 'drink 🍻' : 'drink 🧃'
+console.log(drink)
+
+let drink2
+if (age >= 18) {
+  drink2 = 'drink 🍻'
+} else {
+  drink2 = 'drink 🧃'
+}
+console.log(drink2)
+
+console.log(`I like to ${age >= 18 ? 'drink 🍻' : 'drink 🧃'}`)
+
+
