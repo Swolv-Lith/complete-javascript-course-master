@@ -1,5 +1,5 @@
 'use strict'
-
+/*
 // 34. Function Declaration vs. Expression
 
 // function declaration
@@ -46,3 +46,23 @@ const fruitProcessor = (apples, oranges) => {
 }
 
 console.log(fruitProcessor(2, 3))
+*/
+
+// 37. Reviewing Functions
+
+const calcAge = birthYear => 2037 - birthYear
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = calcAge(birthYear)
+  const retirement = 65 - age
+
+  if (retirement > 0) {
+    console.log(`${firstName} retires is ${retirement} years.`)
+    return retirement
+  } else {
+    console.log(`You're already retired ${firstName}`)
+    return -1
+  }
+}
+
+console.log(yearsUntilRetirement(1920, 'Marshall'))
