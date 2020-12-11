@@ -205,8 +205,6 @@ console.log(marshall)
 
 console.log(`${marshall.firstName} has ${marshall.friends.length} and her BFF is called ${marshall.friends[0]}`)
 
-*/
-
 // 44. Object Methods
 
 const marshall = {
@@ -223,10 +221,41 @@ const marshall = {
   },
 
   getSumary: function () {
-   return `${marshall.firstName} is a ${marshall.age}-years old ${marshall.job}, and she has ${this.hasDriversLicense ? 'a' : 'no'} Driver's License!`
+   return `${marshall.firstName} is a ${marshall.age}-years old ${marshall.job},
+   and she has ${this.hasDriversLicense ? 'a' : 'no'} Driver's License!`
   }
 }
 
 console.log(marshall.calcAge())
 console.log(marshall['calcAge']())
 console.log(marshall.getSumary())
+
+*/
+
+// 45. Coding Challenge #3
+const john = {
+  'fullName': 'John Smith',
+  'weights': 92,
+  'heights': 1.95,
+
+  calcBMI: function () {
+    this.bmi = this.weights / (this.heights ** 2)
+    return this.bmi
+  }
+}
+
+const mark = {
+  'fullName': 'Mark Miller',
+  'weights': 78,
+  'heights': 1.69,
+
+  calcBMI: function () {
+    this.bmi = this.weights / (this.heights ** 2)
+    return this.bmi
+  }
+}
+
+mark.calcBMI()
+john.calcBMI()
+
+console.log(`${john.fullName}'s BMI (${john.bmi.toFixed(2)}) has a ${john.bmi > mark.bmi ? 'greater' : 'less'} then ${mark.fullName}'s BMI (${mark.bmi.toFixed(2)})`)
