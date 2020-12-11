@@ -46,7 +46,7 @@ const fruitProcessor = (apples, oranges) => {
 }
 
 console.log(fruitProcessor(2, 3))
-*/
+
 
 // 37. Reviewing Functions
 
@@ -67,4 +67,44 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1920, 'Marshall'))
 
-console.log('Hey i get it!')
+// 38. Coding Challenge #1 - Gymnastics Teams Average Score
+  
+const calcAvg = (scr1, scr2, scr3) => (scr1 + scr2 + scr3) / 3
+  
+const avgDph = calcAvg(44, 23, 71)
+const avgKla = calcAvg(65, 54, 49)
+  
+function checkWinner(avgDph, avgKla) {
+  if (avgDph >= (avgKla * 2)) {
+    return `Dolphins Win (${avgDph} vs. ${avgKla})`
+  } else if (avgKla >= (avgDph * 2)){
+    return `Koalas Win (${avgKla} vs. ${avgDph})`
+  } else {
+    return 'No winner'
+  }
+}
+  
+console.log(checkWinner(avgDph, avgKla))
+console.log(avgDph, avgKla)
+*/
+
+// 39. Arrays - Data Structures
+  
+const friends = ['Sophia', 'Marcele', 'Guilherme', 'Marcus', 'Nicolas']
+  
+const years = new Array(1990, 1998, 2004, 2010)
+  
+friends[0] = 'Claudio'
+console.log(friends)
+friends[0] = 'Sophia'
+console.log(friends)
+  
+const firstName = 'Marshall'
+const marshall = [firstName, 'Nhemetz', 2020 - 1998, 'Front End Developer', friends]
+console.log(marshall)
+console.log(marshall.length)
+  
+// Exercise
+  
+const calcAge = birthYear => 2020 - birthYear
+const years = [1990, 1998, 2004, 2010]
