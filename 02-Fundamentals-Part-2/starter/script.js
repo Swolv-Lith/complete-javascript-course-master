@@ -148,7 +148,6 @@ console.log(friends.includes('kate'))
 if (friends.includes('kay')) {
   console.log('you have a friend called kay')
 }
-*/
 
 // 41. Coding Challenge #2
 
@@ -161,3 +160,48 @@ const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
 console.log(`Your bill ${bills[0]}, and your tip ${tips[0]}. Total: USD ${total[0]}`)
 console.log(`Your bill ${bills[1]}, and your tip ${tips[1]}. Total: USD ${total[1]}`)
 console.log(`Your bill ${bills[2]}, and your tip ${tips[2]}. Total: USD ${total[2]}`)
+*/
+
+// 42. Introduction to Objects
+
+const marshall = {
+  'firstName': 'Marshall',
+  'lastName': 'Nhemetz',
+  'age': 22,
+  'job': 'T-Shaped Developer',
+  'friends': ['Sophia', 'Marcele', 'Nicolas', 'Marcus', 'Pietro', 'Usagi-san']
+}
+
+const marshallArray = [
+ 'Marshall',
+ 'Nhemetz',
+ 22,
+ 'T-Shaped Developer',
+ ['Sophia', 'Marcele', 'Nicolas', 'Marcus', 'Pietro', 'Usagi-san']
+]
+
+// 43. Dot vs. Bracket Notation
+
+marshall.location = 'Alexandria, Italy'
+marshall['instagram'] = '@ntzmarshall' 
+
+console.log(marshall.lastName)
+console.log(marshall['lastName'])
+
+const nameKey = 'Name'
+console.log(marshall['first' + nameKey])
+console.log(marshall['last' + nameKey])
+
+//const interestedIn = prompt('What do you want to know about Marshall? Choose between firstName, lastName, age, job and friends.')
+
+/*if (marshall[interestedIn]) {
+  console.log(marshall[interestedIn])
+} else {
+  console.log(`${interestedIn} isn't a valid request! Choose between firstName, lastName, age, job and friends.`)
+}*/
+
+console.log(marshall)
+
+// Challenge
+
+console.log(`${marshall.firstName} has ${marshall.friends.length} and her BFF is called ${marshall.friends[0]}`)
