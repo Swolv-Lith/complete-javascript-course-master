@@ -160,7 +160,6 @@ const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
 console.log(`Your bill ${bills[0]}, and your tip ${tips[0]}. Total: USD ${total[0]}`)
 console.log(`Your bill ${bills[1]}, and your tip ${tips[1]}. Total: USD ${total[1]}`)
 console.log(`Your bill ${bills[2]}, and your tip ${tips[2]}. Total: USD ${total[2]}`)
-*/
 
 // 42. Introduction to Objects
 
@@ -192,16 +191,42 @@ const nameKey = 'Name'
 console.log(marshall['first' + nameKey])
 console.log(marshall['last' + nameKey])
 
-//const interestedIn = prompt('What do you want to know about Marshall? Choose between firstName, lastName, age, job and friends.')
+const interestedIn = prompt('What do you want to know about Marshall? Choose between firstName, lastName, age, job and friends.')
 
-/*if (marshall[interestedIn]) {
+if (marshall[interestedIn]) {
   console.log(marshall[interestedIn])
 } else {
   console.log(`${interestedIn} isn't a valid request! Choose between firstName, lastName, age, job and friends.`)
-}*/
+}
 
 console.log(marshall)
 
 // Challenge
 
 console.log(`${marshall.firstName} has ${marshall.friends.length} and her BFF is called ${marshall.friends[0]}`)
+
+*/
+
+// 44. Object Methods
+
+const marshall = {
+  'firstName': 'Marshall',
+  'lastName': 'Nhemetz',
+  'birthYear': 1998,
+  'job': 'T-Shaped Developer',
+  'friends': ['Sophia', 'Marcele', 'Nicolas', 'Marcus', 'Pietro', 'Usagi-san'],
+  'hasDriversLicense': false,
+
+  calcAge: function () {
+    this.age = 2020 - this.birthYear
+    return this.age
+  },
+
+  getSumary: function () {
+   return `${marshall.firstName} is a ${marshall.age}-years old ${marshall.job}, and she has ${this.hasDriversLicense ? 'a' : 'no'} Driver's License!`
+  }
+}
+
+console.log(marshall.calcAge())
+console.log(marshall['calcAge']())
+console.log(marshall.getSumary())
