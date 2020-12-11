@@ -86,7 +86,6 @@ function checkWinner(avgDph, avgKla) {
   
 console.log(checkWinner(avgDph, avgKla))
 console.log(avgDph, avgKla)
-*/
 
 // 39. Arrays - Data Structures
   
@@ -108,3 +107,57 @@ console.log(marshall.length)
   
 const calcAge = birthYear => 2020 - birthYear
 const years = [1990, 1998, 2004, 2010]
+
+const age1 = calcAge(years[0])
+const age2 = calcAge(years[1])
+const age3 = calcAge(years[years.length - 1])
+
+console.log(age1, age2, age3)
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])]
+
+console.log(ages)
+
+// 40. Basic Array Operations (Methods)
+
+const friends = ['michael', 'maria', 'yennifer']
+
+// add elements
+const newLength = friends.push('kay')
+console.log(friends)
+console.log(newLength)
+
+friends.unshift('yarn')
+console.log(friends)
+
+// remove elements
+friends.pop() // last
+friends.pop()
+
+console.log(friends)
+
+friends.shift() // first
+
+console.log(friends)
+
+// indexOf show the index.... duh'
+
+console.log(friends.includes('kay'))
+console.log(friends.includes('kate'))
+
+if (friends.includes('kay')) {
+  console.log('you have a friend called kay')
+}
+*/
+
+// 41. Coding Challenge #2
+
+const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20
+
+const bills = [125, 555, 44]
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
+
+console.log(`Your bill ${bills[0]}, and your tip ${tips[0]}. Total: USD ${total[0]}`)
+console.log(`Your bill ${bills[1]}, and your tip ${tips[1]}. Total: USD ${total[1]}`)
+console.log(`Your bill ${bills[2]}, and your tip ${tips[2]}. Total: USD ${total[2]}`)
